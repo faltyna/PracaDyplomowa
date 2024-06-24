@@ -1,0 +1,53 @@
+/* Resetowanie styli i podstawowe ustawienia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.movie-item {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.movie-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.movie-item h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0;
+}
+
+.movie-item p {
+    padding: 10px;
+    margin: 0;
+}
+
+.movie-item p:first-child {
+    margin-top: 5px;
+}
+
+.movie-item p:last-child {
+    margin-bottom: 5px;
+} 
