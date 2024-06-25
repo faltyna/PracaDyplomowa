@@ -28,15 +28,15 @@ Plik `sidebar.js` zarządza otwieraniem i zamykaniem panelu bocznego. W nim:
 
 ### APP.PY 
 	1.	Wczytanie danych:
-	•	Dane są wczytywane z pliku CSV, który zawiera informacje o filmach, takie jak tytuł, rok wydania, gatunek, ocena i opis (overview).
-	•	Funkcja load_and_check_csv wczytuje dane i sprawdza strukturę kolumn, aby upewnić się, że wszystkie niezbędne dane są dostępne.
+	Dane są wczytywane z pliku CSV, który zawiera informacje o filmach, takie jak tytuł, rok wydania, gatunek, ocena i opis (overview).
+	Funkcja load_and_check_csv wczytuje dane i sprawdza strukturę kolumn, aby upewnić się, że wszystkie niezbędne dane są dostępne.
 	2.	Przetwarzanie tekstu:
-	•	Kolumna ‘Overview’ (opis filmu) jest wykorzystywana do przetwarzania tekstu za pomocą macierzy TF-IDF (Term Frequency-Inverse Document Frequency).
-	•	TF-IDF jest techniką, która przekształca tekst na wektory liczbowych wartości, co pozwala na analizę tekstu i obliczanie podobieństwa między różnymi dokumentami (w tym przypadku opisami filmów).
+	Kolumna ‘Overview’ (opis filmu) jest wykorzystywana do przetwarzania tekstu za pomocą macierzy TF-IDF (Term Frequency-Inverse Document Frequency).
+	TF-IDF jest techniką, która przekształca tekst na wektory liczbowych wartości, co pozwala na analizę tekstu i obliczanie podobieństwa między różnymi dokumentami (w tym przypadku opisami filmów).
 	3.	Obliczanie podobieństwa:
-	•	Po przekształceniu opisów filmów na wektory TF-IDF, obliczane jest podobieństwo kosinusowe między wszystkimi filmami za pomocą funkcji linear_kernel z biblioteki scikit-learn.
-	•	Podobieństwo kosinusowe mierzy, jak bardzo dwa wektory są do siebie podobne, co w kontekście rekomendacji filmów oznacza, jak podobne są opisy różnych filmów.
+	Po przekształceniu opisów filmów na wektory TF-IDF, obliczane jest podobieństwo kosinusowe między wszystkimi filmami za pomocą funkcji linear_kernel z biblioteki scikit-learn.
+	Podobieństwo kosinusowe mierzy, jak bardzo dwa wektory są do siebie podobne, co w kontekście rekomendacji filmów oznacza, jak podobne są opisy różnych filmów.
 	4.	Generowanie rekomendacji:
-	•	Funkcja get_recommendations pobiera indeks wybranego filmu na podstawie jego tytułu.
-	•	Następnie, obliczane jest podobieństwo tego filmu z wszystkimi innymi filmami.
-	•	Filmy są sortowane według wyników podobieństwa, a najwyżej oceniane (najbardziej podobne) filmy są zwracane jako rekomendacje.
+	Funkcja get_recommendations pobiera indeks wybranego filmu na podstawie jego tytułu.
+	Następnie, obliczane jest podobieństwo tego filmu z wszystkimi innymi filmami.
+	Filmy są sortowane według wyników podobieństwa, a najwyżej oceniane (najbardziej podobne) filmy są zwracane jako rekomendacje.
