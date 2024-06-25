@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDB Top 1000 Movies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Nagłówek z przyciskami "Genres", "Sort" i "Home page" -->
+    <div id="header">
+        <div class="left-section">
+            <!-- Przycisk do otwierania panelu bocznego z gatunkami -->
+            <button id="open-btn" class="open-btn">&#9776; Genres</button>
+            <div class="sort-dropdown">
+                <!-- Przycisk do wyświetlania opcji sortowania -->
+                <button id="sort-btn" class="sort-btn">Sort</button>
+                <div id="sort-options" class="sort-dropdown-content">
+                    <!-- Opcje sortowania filmów -->
+                    <button class="sort-option" data-sort="title-asc">Sort by Title (A-Z)</button>
+                    <button class="sort-option" data-sort="title-desc">Sort by Title (Z-A)</button>
+                    <button class="sort-option" data-sort="year-asc">Sort by Year (Oldest)</button>
+                    <button class="sort-option" data-sort="year-desc">Sort by Year (Newest)</button>
+                    <button class="sort-option" data-sort="rating-desc">Sort by Rating (Highest)</button>
+                    <button class="sort-option" data-sort="rating-asc">Sort by Rating (Lowest)</button>
+                </div>
+            </div>
+        </div>
+        <!-- Przycisk do powrotu na stronę główną -->
+        <button id="home-button">Home page</button>
+    </div>
+
+    <!-- Pasek wyszukiwania do wyszukiwania filmów po tytule -->
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search by title...">
+        <button id="search-button">Search</button>
+    </div>
+
+    <!-- Panel boczny z gatunkami -->
+    <div id="side-panel" class="side-panel">
+        <!-- Przycisk do zamykania panelu bocznego -->
+        <button id="close-btn" class="close-btn">&times;</button>
+        <ul id="genre-list">
+            <!-- Lista gatunków będzie dynamicznie dodana tutaj przez JavaScript -->
+        </ul>
+    </div>
+
+    <!-- Kontener do wyświetlania filmów -->
+    <div id="movies-container" class="movies-container">
+        <!-- Filmy będą dynamicznie dodawane tutaj przez JavaScript -->
+    </div>
+
+    <!-- Modalne okienko do wyświetlania rekomendacji -->
+    <div id="modal" class="modal">
+        <div class="modal-content" id="modal-content">
+            <!-- Tekst dla okienka modalnego będzie dynamicznie dodany tutaj przez JavaScript -->
+        </div>
+    </div>
+
+    <!-- Pliki JavaScript do obsługi różnych funkcji -->
+    <script src="helpers.js"></script>
+    <script src="filter.js"></script>
+    <script src="sort.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="init.js"></script>
+</body>
+</html>

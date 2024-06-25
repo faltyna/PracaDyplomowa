@@ -1,0 +1,339 @@
+/* Stylizacja całego dokumentu */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nagłówek */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+/* Lewa sekcja w nagłówku */
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Przycisk "Home Page" */
+#home-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+#home-button:hover {
+    background-color: #555;
+    transform: scale(1.02);
+}
+
+/* Przycisk otwierający panel boczny */
+.open-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+}
+
+.open-btn:hover {
+    background-color: #555;
+    transform: scale(1.02);
+}
+
+/* Kontener wyszukiwania */
+#search-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #f0f0f0;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Pole tekstowe wyszukiwania */
+#search-input {
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#search-input:hover {
+    transform: scale(1.02);
+}
+
+/* Przycisk wyszukiwania */
+#search-button {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #555;
+    transform: scale(1.02);
+}
+
+/* Panel boczny */
+#side-panel {
+    height: 100%;
+    width: 0;
+    max-width: 200px;
+    position: fixed;
+    z-index: 1002;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+}
+
+/* Nagłówek w panelu bocznym */
+#side-panel h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Lista gatunków w panelu bocznym */
+#genre-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* Elementy listy gatunków */
+#genre-list li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#genre-list li:hover {
+    background-color: #575757;
+    transform: scale(1.02);
+}
+
+/* Przycisk zamykający panel boczny */
+#side-panel .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#side-panel .close-btn:hover {
+    transform: scale(1.02);
+    color: #575757;
+}
+
+/* Kontener rozwijanego menu sortowania */
+.sort-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Zawartość rozwijanego menu sortowania */
+.sort-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1003;
+}
+
+/* Przycisk w rozwijanym menu sortowania */
+.sort-dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+}
+
+.sort-dropdown-content button:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02);
+}
+
+/* Przycisk sortowania */
+.sort-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+}
+
+.sort-btn:hover {
+    background-color: #555;
+    transform: scale(1.02);
+}
+
+/* Kontener filmów */
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 160px 20px 20px 20px;
+}
+
+/* Element filmu */
+.movie-item {
+    flex: 1 1 calc(50% - 40px);
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.movie-item:hover{
+    background-color: #c8c8c8;
+    transform: scale(1.02);
+}
+
+/* Opis filmu */
+.movie-overview {
+    font-size: 0.875rem;
+    margin-top: 10px;
+}
+
+/* Plakat filmu */
+.movie-poster {
+    max-width: 150px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+/* Szczegóły filmu */
+.movie-details {
+    flex-grow: 1;
+}
+
+/* Tytuł filmu */
+.movie-item h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Akapity w elemencie filmu */
+.movie-item p {
+    font-size: 0.875rem;
+    margin: 5px 0;
+}
+
+/* Ocena w postaci gwiazdek */
+.star-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.star {
+    color: gold;
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+.rating-number {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Stylizacja okienka modalnego */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1003;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal.hide {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* Zawartość okienka modalnego */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation: fadeIn 0.5s, fadeOut 0.5s 4.5s;
+}
+
+/* Animacja pojawiania się okienka modalnego */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Animacja znikania okienka modalnego */
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
